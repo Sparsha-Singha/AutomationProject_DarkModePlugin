@@ -9,7 +9,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Start server in background
+        run: npm start &
+
+      - name: Wait for server to start
+        run: npx wait-on http://localhost/DarkTest/
+
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v6
+        with:
+        browser: chrome
+        headless: true
