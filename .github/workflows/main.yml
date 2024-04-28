@@ -1,0 +1,38 @@
+name: End-to-end tests
+on:
+  push:
+    branches:
+      - feature1
+jobs:
+  cypress-run:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: install cypress
+        run: npm install cypress --save-dev
+
+      - name: install dotenv
+        run: npm install dotenv --save
+
+      - name: install cypress if
+        run: npm i -D cypress-if
+      
+      - name: install cypress xpath
+        run: npm install -D @cypress/xpath
+
+      - name: Start server in background
+        run: npx cypress open &
+
+      # - name: Wait for server to start
+      #   run: npx wait-on http://localhost/DarkTest/
+
+      # Install npm dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        # with:
+        #   browser: chrome
+        #   headless: true
+        
