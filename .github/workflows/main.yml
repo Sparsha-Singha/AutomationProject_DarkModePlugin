@@ -9,6 +9,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
+      - name: install cypress
+        run: npm install cypress --save-dev
+
+      - name: install dotenv
+        run: npm install dotenv --save
+
+      - name: install cypress if
+        run: npm i -D cypress-if
+      
+      - name: install cypress xpath
+        run: npm install -D "@cypress/xpath
 
       - name: Start server in background
         run: npx cypress open &
