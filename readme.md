@@ -1,4 +1,5 @@
 Test Suite is created Using Visual Studio Code Tool
+
 Getting Started:
 1. Install cypress using command "npm install cypress --save-dev"
 2. Install plugin dotenv using command "npm install dotenv --save"
