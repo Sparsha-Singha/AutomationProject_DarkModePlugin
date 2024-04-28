@@ -20,7 +20,7 @@ jobs:
         run: npm i -D cypress-if
       
       - name: install cypress xpath
-        run: npm install -D "@cypress/xpath
+        run: npm install -D @cypress/xpath
 
       - name: Start server in background
         run: npx cypress open &
