@@ -25,8 +25,8 @@ jobs:
       - name: Start server in background
         run: npx cypress open &
 
-      - name: Wait for server to start
-        run: npx wait-on http://localhost/DarkTest/
+      # - name: Wait for server to start
+      #   run: npx wait-on http://localhost/DarkTest/
 
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
