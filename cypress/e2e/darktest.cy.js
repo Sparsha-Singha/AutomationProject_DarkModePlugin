@@ -3,6 +3,7 @@
 Cypress.config('defaultCommandTimeOut', 10000)
 import 'cypress-if' // conditional plugin
 
+// describe mehthod
 describe('Dark mode plugin testing', () => {
     let wusername, wpassword;
     beforeEach('Login Process',()=>{
