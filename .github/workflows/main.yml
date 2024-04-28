@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Start server in background
-        run: npm start &
+        run: npx cypress open &
 
       - name: Wait for server to start
         run: npx wait-on http://localhost/DarkTest/
