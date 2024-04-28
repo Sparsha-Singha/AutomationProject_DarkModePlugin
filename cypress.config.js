@@ -3,7 +3,7 @@ require("dotenv").config();
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'http://localhost/DarkTest/wp-login.php',
+    baseUrl: 'http://localhost/DarkTest/',
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
