@@ -1,0 +1,71 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1719852643672' stop='1719852730079'>
+    <name>Dark mode plugin testing</name>
+    <title>Dark mode plugin testing</title>
+    <test-cases>
+        <test-case start='1719852643673' status='passed' stop='1719852678032'>
+            <name>Checking weather the WP Dark Mode plugin is active or not</name>
+            <title>Checking weather the WP Dark Mode plugin is active or not</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1719852678088' status='passed' stop='1719852689702'>
+            <name>Enabling Admin Dashboard Dark Mode and Validate whether it is working or not on the Admin Dashboard.</name>
+            <title>Enabling Admin Dashboard Dark Mode and Validate whether it is working or not on the Admin Dashboard.</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1719852689795' status='passed' stop='1719852695335'>
+            <name>Changing Floating Switch Style</name>
+            <title>Changing Floating Switch Style</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1719852695381' status='passed' stop='1719852704135'>
+            <name>Switch Size Customization</name>
+            <title>Switch Size Customization</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1719852704188' status='passed' stop='1719852709764'>
+            <name>Changing Switch Position</name>
+            <title>Changing Switch Position</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1719852709815' status='passed' stop='1719852715707'>
+            <name>Disabling Keyboard Shortcut</name>
+            <title>Disabling Keyboard Shortcut</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1719852715767' status='passed' stop='1719852721086'>
+            <name>Changing Animation Effect</name>
+            <title>Changing Animation Effect</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1719852721140' status='passed' stop='1719852730077'>
+            <name>Validation whether the Darkmode is working or not from the Frontend.</name>
+            <title>Validation whether the Darkmode is working or not from the Frontend.</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
