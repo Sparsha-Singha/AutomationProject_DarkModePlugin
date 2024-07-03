@@ -3,8 +3,6 @@
 Cypress.config('defaultCommandTimeOut', 10000)
 import 'cypress-if' // conditional plugin
 
-// describe mehthod
-// git push for ci
 describe('Dark mode plugin testing', () => {
     let wusername, wpassword;
     beforeEach('Login Process',()=>{
@@ -21,36 +19,51 @@ describe('Dark mode plugin testing', () => {
         
         cy.get('#menu-plugins > .wp-has-submenu > .wp-menu-name').click()
         cy.wait(1000)
-        cy.get('.subsubsub > .active > a').click()
-        // cy.get('.wp-list-table').should('be.contain','WP Dark Mode')
-        cy.get('.wp-list-table').contains('WP Dark Mode')
+        cy.get('.subsubsub > .active > a')
             .if('visible')
             .then(() => {
-                cy.log('"WP Dark Mode" plugin is active')
-            })
-            .else()
-            .then(() => {   
-                cy.log('"WP Dark Mode" plugin is not active')
-                cy.get('.inactive > a').click()
+                cy.get('.subsubsub > .active > a').click()
                 cy.get('.wp-list-table').contains('WP Dark Mode')
                 .if('visible')
                 .then(() => {
-                    cy.log('"WP Dark Mode" plugin is Installed but inactive')
-                    cy.get('[data-slug="wp-dark-mode"] > .plugin-title > .row-actions').contains('Activate').click()
-                    // cy.get('.button-primary').click()
+                    cy.log('"WP Dark Mode" plugin is active')
                 })
                 .else()
-                .then(() =>{
-                    cy.log('"WP Dark Mode" plugin is not installed')
-                    cy.get('.page-title-action').click()
-                    cy.get('#search-plugins').type('WP Dark Mode')
-                    cy.wait(7000)
-                    cy.get('.plugin-card-wp-dark-mode > .plugin-card-top > .action-links > .plugin-action-buttons').contains('Install Now',{timeout: 10000}).click()
-                    cy.wait(7000)
-                    cy.get('.plugin-card-wp-dark-mode > .plugin-card-top > .action-links > .plugin-action-buttons').contains('Activate',{timeout: 40000}).click()
-                })
+                .then(() => {   
+                    cy.log('"WP Dark Mode" plugin is not active')
+                    cy.get('.inactive > a').click()
+                    cy.get('.wp-list-table').contains('WP Dark Mode')
+                    .if('visible')
+                    .then(() => {
+                        cy.log('"WP Dark Mode" plugin is Installed but inactive')
+                        cy.get('[data-slug="wp-dark-mode"] > .plugin-title > .row-actions').contains('Activate').click()
+                        // cy.get('.button-primary').click()
+                    })
+                    .else()
+                    .then(() =>{
+                        cy.log('"WP Dark Mode" plugin is not installed')
+                        cy.get('.page-title-action').click()
+                        cy.get('#search-plugins').type('WP Dark Mode')
+                        cy.wait(7000)
+                        cy.get('.plugin-card-wp-dark-mode > .plugin-card-top > .action-links > .plugin-action-buttons').contains('Install Now',{timeout: 10000}).click()
+                        cy.wait(7000)
+                        cy.get('.plugin-card-wp-dark-mode > .plugin-card-top > .action-links > .plugin-action-buttons').contains('Activate',{timeout: 40000}).click()
+                    })
 
+                })
             })
+            .else()
+            .then(() =>{
+                cy.log('"WP Dark Mode" plugin is not installed')
+                cy.get('.page-title-action').click()
+                cy.get('#search-plugins').type('WP Dark Mode')
+                cy.wait(7000)
+                cy.get('.plugin-card-wp-dark-mode > .plugin-card-top > .action-links > .plugin-action-buttons').contains('Install Now',{timeout: 10000}).click()
+                cy.wait(7000)
+                cy.get('.plugin-card-wp-dark-mode > .plugin-card-top > .action-links > .plugin-action-buttons').contains('Activate',{timeout: 40000}).click()
+            })
+        // cy.get('.wp-list-table').should('be.contain','WP Dark Mode')
+        
     })
 
     it('Enabling Admin Dashboard Dark Mode and Validate whether it is working or not on the Admin Dashboard.', ()=>{
@@ -116,7 +129,7 @@ describe('Dark mode plugin testing', () => {
         cy.get('#toplevel_page_wp-dark-mode > .wp-has-submenu > .wp-menu-name').click()
         cy.get('.router-link-active').click()
         cy.get(':nth-child(2) > .items-center > .flex').click()
-        cy.get('.bg-blue-500').click()
+        // cy.get('.bg-blue-500').click()
         cy.wait(1000)
         cy.get('#wp-admin-bar-site-name > [aria-expanded="false"]').click()
         cy.get('html').should('have.attr', 'data-wp-dark-mode-active')
