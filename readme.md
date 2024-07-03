@@ -7,3 +7,15 @@ Getting Started:
 4. Install plugin cypress-xpath using command "npm install -D @cypress/xpath"
 5. Download and open "AutomationProject_DarkModePlugin" folder in Cypress  environment
 6. Run comnand "npx cypress open" to view test
+
+## Overview
+
+![App Screenshot](https://github.com/Sparsha-Singha/AutomationProject_DarkModePlugin/blob/main/Image%20Gallery/Capture1.PNG)
+
+## Graphs
+
+![App Screenshot](https://github.com/Sparsha-Singha/AutomationProject_DarkModePlugin/blob/main/Image%20Gallery/Capture2.PNG)
+
+![App Screenshot](https://github.com/Sparsha-Singha/AutomationProject_DarkModePlugin/blob/main/Image%20Gallery/Capture3.PNG)
+
+![App Screenshot](https://github.com/Sparsha-Singha/AutomationProject_DarkModePlugin/blob/main/Image%20Gallery/Capture4.PNG)
