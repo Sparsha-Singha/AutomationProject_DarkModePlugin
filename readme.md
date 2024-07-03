@@ -19,3 +19,7 @@ Getting Started:
 ![App Screenshot](https://github.com/Sparsha-Singha/AutomationProject_DarkModePlugin/blob/main/Image%20Gallery/Capture3.PNG)
 
 ![App Screenshot](https://github.com/Sparsha-Singha/AutomationProject_DarkModePlugin/blob/main/Image%20Gallery/Capture4.PNG)
+
+## Tests
+
+![App Screenshot](https://github.com/Sparsha-Singha/AutomationProject_DarkModePlugin/blob/main/Image%20Gallery/Capture5.PNG)
