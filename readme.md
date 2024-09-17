@@ -6,7 +6,21 @@ Getting Started:
 3. Install plugin cypress-if using command "npm i -D cypress-if"
 4. Install plugin cypress-xpath using command "npm install -D @cypress/xpath"
 5. Download and open "AutomationProject_DarkModePlugin" folder in Cypress  environment
-6. Run comnand "npx cypress open" to view test
+6. Create a .env file in the root of the project (outside of the cypress folder). This file will contain your username and password.
+7. Modify your Cypress configuration file to load environment variables using dotenv as-
+   const dotenv = require('dotenv');
+dotenv.config();
+module.exports = {
+  e2e: {
+    setupNodeEvents(on, config) {
+      config.env.username = process.env.CYPRESS_USERNAME;
+      config.env.password = process.env.CYPRESS_PASSWORD;
+      return config;
+    },
+  },
+};
+8. use Cypress.env() to access the username and password in the test cases
+9. Run comnand "npx cypress open" to view test
 
 ## Overview
 
